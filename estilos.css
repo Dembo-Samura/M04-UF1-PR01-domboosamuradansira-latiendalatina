@@ -6,8 +6,68 @@
 
 
 /* estilos.css */
-
-h1 {
-    color: red;
+body {
+    font-family: 'Segoe UI Black', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
 }
 
+.cabecera1{
+    background: linear-gradient(to bottom, #ffc107, #303f9f, #961111);    
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+
+}
+
+.titulo{
+    padding: 10px;
+    font-size: 34px;
+}
+
+.cabecera2{
+    
+}
+
+.menu{
+    padding: 10px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #000000;
+    padding: 10px;
+    text-align: center
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content:flex-start;
+    text-align: left;
+}
+
+.menu ul li{
+    display: inline;
+    margin: 0 10px;
+    width: 100%;
+}
+
+
+nav ul li a:hover{
+    background-color: #ffc107;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+.licontacto{
+    margin-left: 100%;
+    
+}
