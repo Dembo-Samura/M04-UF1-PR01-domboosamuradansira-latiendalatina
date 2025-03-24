@@ -1,3 +1,13 @@
+/* colores principales */
+:root {
+    --color-primario: #4CAF50; /* Verde */
+    --color-secundario: #FFC107; /* Ámbar */
+    --color-texto: #333;
+    --color-blanco: #fff;
+    --color-fondo: #f8f9fa; /* Fondo general */
+}
+
+/* reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,28 +15,25 @@
 }
 
 
-/* estilos.css */
+/* estilos.css  index */
 body {
-    font-family: 'Segoe UI Black', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
+    background: var(#f8f9fa);
+    color: var(--color-blanco);
+    text-align: center;
 }
 
 .cabecera1{
-    background: linear-gradient(to bottom, #ffc107, #303f9f, #961111);    
-    color: #000000;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-
+    background: #4CAF50;
+    color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
 }
 
-.titulo{
-    padding: 10px;
-    font-size: 34px;
+header .titulo{
+    font-size: 24px;
+    font-weight: bold;   
 }
 
 .cabecera2{
@@ -34,40 +41,38 @@ body {
 }
 
 .menu{
-    padding: 10px;
+    
 }
 
 .menu a{
-    text-decoration: none;
-    color: #000000;
-    padding: 10px;
-    text-align: center
+    
 }
 
 .menu ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content:flex-start;
-    text-align: left;
+    
 }
 
 .menu ul li{
-    display: inline;
-    margin: 0 10px;
-    width: 100%;
+   
 }
 
 
 nav ul li a:hover{
-    background-color: #ffc107;
-    border-radius: 5px;
-    padding: 5px;
-    border: 1px solid #000;
+    
 }
 
 .licontacto{
-    margin-left: 100%;
+ 
     
 }
+
+/* estilos.css  productos */
+
+
+
+/* estilos.css  sobre */
+
+
+
+
+/* estilos.css  contacto */
