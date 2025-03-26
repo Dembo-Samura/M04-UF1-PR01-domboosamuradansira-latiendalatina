@@ -20,50 +20,67 @@ body {
     background: var(#f8f9fa);
     color: var(--color-blanco);
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.cabecera1{
+
+
+.cabecera{
     background: #4CAF50;
-    color: #f8f9fa;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-}
-
-header .titulo{
-    font-size: 24px;
-    font-weight: bold;   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  
 }
 
 .cabecera2{
-    
+    height: 100%;
+    background: #4CAF50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.menu{
+.logocabecera{
+    display: grid;
+    margin: 0px;
+
+}
+
+h1{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+   }
     
+.menu{
+    display: grid;   
 }
 
 .menu a{
-    
+    text-decoration: none;
 }
 
 .menu ul{
-    
+    display: inline;
 }
+
+.logocabecera2{
+    display: grid;
+    margin: 0px;
+    justify-self: end;
+}
+
 
 .menu ul li{
-   
+    list-style-type: none;
+    display: inline;
 }
-
 
 nav ul li a:hover{
     
 }
 
 .licontacto{
- 
-    
+   
 }
 
 /* estilos.css  productos */
