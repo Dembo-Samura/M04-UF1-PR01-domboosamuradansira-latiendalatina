@@ -28,7 +28,7 @@ body {
  /* Estilos de la cabecera */   
 
 .cabecera{
-    background: #4CAF50;
+    background: #fff;
     color: #333;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
