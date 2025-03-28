@@ -27,7 +27,7 @@ body {
 
  /* Estilos de la cabecera */   
 
-.cabecera{
+.cabecera1{
     background: #fff;
     color: #333;
     display: grid;
@@ -41,6 +41,8 @@ body {
     align-items: center; /* Alinea los elementos verticalmente */
     border-radius: 50px; /* Bordes redondeados */
     box-shadow: 0 4px 8px #333; /* Sombra */
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); /* Sombra negra suave */
+
 }
 .logocabecera{
     grid-column: 1;
@@ -52,7 +54,7 @@ body {
     border-radius: 0;
 }
 
-.cabcentral{
+.cabcentral1{
     grid-column: 2; /* Columna central */
     text-align: center;
     display: flex;
@@ -65,14 +67,14 @@ body {
     overflow: hidden;
 }
 
-h1 .titulo{
+h1 .titulo1{
     font-size: 34px;
     font-weight: bold;
     margin: 10px 0;  
     padding: 0px;
    }
 
-.subtitulo{
+.subtitulo1{
     font-weight: bold;
     margin: 0;
     padding: 5px;
@@ -127,14 +129,18 @@ border: 1px solid #333;
 .mainindex{
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 columnas */
-    grid-template-rows: auto auto; /* Dos filas */
+    grid-template-rows: 1fr 1fr; /* tres filas */
+    justify-self: center; /* Centra horizontalmente */
+    align-self: center; /* Centra verticalmente */
+    align-items: center; /* Alinea los elementos verticalmente */
     gap: 20px; /* Espacio entre los elementos */
     padding: 20px;
     margin: 0px;
     width: 100%;
+    height: 100%;
 }
 
-.cabecera2{
+.sec0{
     grid-column: 1; /* Ocupa ambas columnas */
     grid-row: 1; /* Coloca el .cabecera2 en la primera fila */
     justify-self: center; /* Centra horizontalmente */
@@ -142,10 +148,24 @@ border: 1px solid #333;
     align-items: center; /* Alinea los elementos verticalmente */
     margin-left: -200px; 
     padding: 10px;
+    margin-top: -100px;
 }
 
-.section1{
+.sec0 h1{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0;  
+    padding: 5px;
+}
 
+.sec0 p{
+    font-weight: bold;
+    margin: 0;
+    padding: 0px;
+}
+
+.mainindex img{
+    margin-top: 40px;
 }
 
 .sec1{
@@ -154,24 +174,69 @@ border: 1px solid #333;
     justify-self: center; /* Centra horizontalmente */
     align-self: center; /* Centra verticalmente */
     align-items: center; /* Alinea los elementos verticalmente */
-    margin: 0;
+    margin: 0px;
     padding: 10px;
     margin-right: 100px;
+    margin-top: -100px;
 }
 
-.section2{
-    
+
+.sec1 h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0;  
+    padding: 5px;
+}
+
+.sec1 p{
+    font-weight: bold;
+    margin: 0;
+    padding: 0px;
+    text-align: left;
+    line-height: 1.8;
 }
 
 .sec2{
-    grid-column: 1; /* Coloca el .section2 en la primera columna */
+    color: #333;
+    grid-column: 1 / 3; /* Coloca el .section2 en la primera columna */
     grid-row: 2; /* Coloca el .section2 en la segunda fila */
     justify-self: center; /* Centra horizontalmente */
     align-self: center; /* Centra verticalmente */
     align-items: center; /* Alinea los elementos verticalmente */
-    margin-left: -200px; 
+    margin-left: 0px; 
+    margin-top: -50px;
     padding: 10px;
+    gap: 10px;
 }
+
+.sec2 h2{
+    font-weight: bold;
+    margin: 20px 0;  
+    padding: 5px;
+}
+
+.sec2 p{
+    font-weight: bold;
+    margin: 0;
+    padding: 0px;
+    line-height: 1.8;
+}
+
+.sec2 ul li{
+    display: inline;
+    list-style-type: none;
+}
+
+.sec2 ul{
+    margin-top: 100px;
+}
+
+.sec2 img{
+    width: 200px;
+    height: 200px;
+    margin: 0 50px;
+}
+
 
 
 
@@ -184,16 +249,29 @@ footer{
     background: #4CAF50;
     color: #333;
     text-align: center;
-    padding: 10px;
+    padding: 0px;
     margin: 0px;
     width: 100%;
+    margin-top: 100px;
 }
 
 .pie1{
     grid-row: 1; /* Coloca el .pie1 en la primera fila */
     grid-column: 1; /* Coloca el .pie3 en la segunda columna */
     align-items: center; /* Alinea los elementos verticalmente */
-    padding: 10px;    
+    padding: 0px;    
+}
+
+.pie1 img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: -30px;
+}
+
+.insta img{
+    width: 35px;    
+    height: 35px;
+    margin-bottom: auto;
 }
 
 .pie2{
@@ -223,11 +301,35 @@ footer{
     color: #333;
 }
 
+.pie3 h4{
+    font-weight: bold;
+}
+
+.telefono, .horario, .email, .direccion{
+    padding: 10px;
+
+}
+
+.direccion h4 a{
+    display: inline-block; /* Cambia el comportamiento del enlace */
+    margin-top: 40px;
+    font-weight: bold;
+    background: #FFC107;
+}
+
+.direccion img{
+    width: 35px;    
+    height: 35px;
+    margin-top: 0px;
+}
+    
+
 .pie4{
     grid-row: 1; /* Coloca el .pie3 en la segunda columna */
     grid-column: 4; /* Coloca el .pie4 en la segunda columna */
     align-items: center; /* Alinea los elementos verticalmente */
-    padding: 10px;
+    padding: -10px;
+    height: auto;
 }
 
 .pie1, .pie2, .pie3, .pie4 {
@@ -237,8 +339,10 @@ footer{
     align-items: center; /* Centra los elementos horizontalmente */
     height: 100%; /* Asegúrate de que ocupe toda la altura disponible */
     padding: 10px; /* Espaciado interno */
-    font-weight: bold;
+}
 
+.pie1, .pie2, .pie3, .pie4{
+    margin: 10px;
 }
 
 
@@ -248,7 +352,7 @@ footer{
     justify-self: center; /* Centra horizontalmente */
     align-self: center; /* Centra verticalmente */
     align-items: center; /* Centra los elementos horizontalmente */
-    margin: 0;
+    margin-top: 20px;
     padding: 10px 0;
 }
 /* estilos.css  productos */
