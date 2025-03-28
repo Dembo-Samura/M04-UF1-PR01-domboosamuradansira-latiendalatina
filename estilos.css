@@ -16,85 +16,241 @@
 
 
 /* estilos.css  index */
+
+/* Estilos generales */
 body {
     background: var(#f8f9fa);
-    color: var(--color-blanco);
+    color: #333;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
+ /* Estilos de la cabecera */   
 
 .cabecera{
     background: #4CAF50;
+    color: #333;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;  
-    box-shadow: inset -10px 0 10px rgba(0, 0, 0, 0.3), inset 10px 0 10px rgba(0, 0, 0, 0.3);}
-
-.cabecera2{
-    height: 100%;
-    background: #4CAF50;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: inset -10px 0 10px rgba(0, 0, 0, 0.3), inset 10px 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.logocabecera{
-    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     margin: 0px;
-
+    padding: 0px;   
+    height: 150px;  
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos entre los extremos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    border-radius: 50px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px #333; /* Sombra */
+}
+.logocabecera{
+    grid-column: 1;
+    justify-self: start;
+    margin: 0px;
+    padding: 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 0;
 }
 
-h1{
+.cabcentral{
+    grid-column: 2; /* Columna central */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: space-between; /* Distribuye los elementos verticalmente */
+    gap: 10px; /* Reduce el espaciado entre los elementos */
+    padding: 10px;
+    height: auto;
+    overflow: hidden;
+}
+
+h1 .titulo{
     font-size: 34px;
     font-weight: bold;
-    margin: 0;
-    padding-top: 10px;
+    margin: 10px 0;  
+    padding: 0px;
    }
 
 .subtitulo{
     font-weight: bold;
-    padding-top: 0px;
-    padding-bottom: 20px;
+    margin: 0;
+    padding: 5px;
 }
     
-.menu{
-    display: grid;
-    padding-bottom: 10px; 
+.menu1{
+    display: inline;
+
+    margin: 5px 0 0 0;
+    padding: 10px;
+    gap: 30px;
 }
 
-.menu a{
+.menu1 ul{
+    width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+    align-items: center; /* Alinea los elementos verticalmente */
+    margin: 0px;
+    padding: 0px;  
+}
+
+ a{
     text-decoration: none;
-    color: #fff ;  
+    color: #333;  
+    font-weight: bold;
+}
+
+.menu1 ul li{
+    display: inline;
+    list-style-type: none;
+    margin: 0 50px;
+}
+
+.menu1 ul li a:hover{
+color: #FFC107;
+padding: 10px;
+border-radius: 5px;
+border: 1px solid #333;
+}
+
+.logocabecera2{
+    grid-column: 3;
+    justify-self: end;
+    align-self: start;
+    width: 150px;
+    height: 150px;
+    border-radius: 0;
+}
+
+
+/* estilos.css  mainindex */
+/* Estilos del contenedor principal */
+.mainindex{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    grid-template-rows: auto auto; /* Dos filas */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+    margin: 0px;
+    width: 100%;
+}
+
+.cabecera2{
+    grid-column: 1; /* Ocupa ambas columnas */
+    grid-row: 1; /* Coloca el .cabecera2 en la primera fila */
+    justify-self: center; /* Centra horizontalmente */
+    align-self: center; /* Centra verticalmente */
+    align-items: center; /* Alinea los elementos verticalmente */
+    margin-left: -200px; 
+    padding: 10px;
+}
+
+.section1{
+
+}
+
+.sec1{
+    grid-column: 2; /* Coloca el .sec1 en la primera columna */
+    grid-row: 1; /* Coloca el .sec1 en la segunda fila */
+    justify-self: center; /* Centra horizontalmente */
+    align-self: center; /* Centra verticalmente */
+    align-items: center; /* Alinea los elementos verticalmente */
+    margin: 0;
+    padding: 10px;
+    margin-right: 100px;
+}
+
+.section2{
+    
+}
+
+.sec2{
+    grid-column: 1; /* Coloca el .section2 en la primera columna */
+    grid-row: 2; /* Coloca el .section2 en la segunda fila */
+    justify-self: center; /* Centra horizontalmente */
+    align-self: center; /* Centra verticalmente */
+    align-items: center; /* Alinea los elementos verticalmente */
+    margin-left: -200px; 
+    padding: 10px;
+}
+
+
+
+/* estilos.css  footer */
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto; /* Dos filas */
+    background: #4CAF50;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+    width: 100%;
+}
+
+.pie1{
+    grid-row: 1; /* Coloca el .pie1 en la primera fila */
+    grid-column: 1; /* Coloca el .pie3 en la segunda columna */
+    align-items: center; /* Alinea los elementos verticalmente */
+    padding: 10px;    
+}
+
+.pie2{
+    grid-row: 1; /* Coloca el .pie2 en la primera fila */
+    grid-column: 2; /* Coloca el .pie3 en la segunda columna */
+    align-items: center; /* Alinea los elementos verticalmente */
+    padding: 10px;
+    list-style-type: none;
+}
+
+.pie2 ul{
+    list-style-type: none;
+    display: flex; /* Cambia a flexbox */
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: space-between; /* Distribuye los elementos uniformemente en altura */
+    height: 100%; /* Asegúrate de que ocupe toda la altura disponible */
+    margin-top: 10px;
+    gap: 0px;
+}
+
+
+.pie3{
+    grid-row: 1; /* Coloca el .pie1 en la primera fila */
+    grid-column: 3; /* Coloca el .pie3 en la segunda columna */
+    align-items: center; /* Alinea los elementos verticalmente */
+    padding: 10px;
+    color: #333;
+}
+
+.pie4{
+    grid-row: 1; /* Coloca el .pie3 en la segunda columna */
+    grid-column: 4; /* Coloca el .pie4 en la segunda columna */
+    align-items: center; /* Alinea los elementos verticalmente */
+    padding: 10px;
+}
+
+.pie1, .pie2, .pie3, .pie4 {
+    display: flex; /* Cambia a flexbox */
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: space-between; /* Distribuye los elementos uniformemente en altura */
+    align-items: center; /* Centra los elementos horizontalmente */
+    height: 100%; /* Asegúrate de que ocupe toda la altura disponible */
+    padding: 10px; /* Espaciado interno */
     font-weight: bold;
 
 }
 
-.menu ul{
-    display: inline;
+
+.copy{
+    grid-column: 2 / 4 ; /* Coloca el .pie4 en la segunda columna */
+    grid-row: 2; /* Coloca el .copy en la segunda fila */
+    justify-self: center; /* Centra horizontalmente */
+    align-self: center; /* Centra verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin: 0;
+    padding: 10px 0;
 }
-
-.logocabecera2{
-    display: grid;
-    margin: 0px;
-    justify-self: end;
-}
-
-
-.menu ul li{
-    list-style-type: none;
-    display: inline;
-}
-
-nav ul li a:hover{
-    
-}
-
-.licontacto{
-   
-}
-
 /* estilos.css  productos */
 
 
