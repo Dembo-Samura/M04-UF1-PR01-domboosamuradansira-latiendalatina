@@ -433,25 +433,28 @@ footer{
 .sobrenos{
     display: grid;
     grid-template-columns: 1fr 1fr; /* Dos columnas */
-    grid-template-rows: auto auto auto; /*2 fila */
+    grid-template-rows: auto auto auto auto auto; /*2 fila */
     justify-items: center; /* Centra horizontalmente los elementos */
     align-items: center; /* Centra verticalmente los elementos */
     margin-top: 100px;
     gap: 20px; /* Espaciado entre los elementos */
     height: auto;
     line-height: 1.8;
+    text-align: justify;
 }
 
 .sobrenos .sob{
     grid-column: 1 / 3;
     grid-row: 1;   
-    margin-right: 25%;
-    margin-left: 25%;
+    margin-right: 15%;
+    margin-left: 15%;
 }
 
-.sobrenos .sob h1{
+.sobrenos .sob h1, .sobrenos .sob1 h2, .sobrenos .sob2 h2, .sobrenos .sob3 h2, .sobrenos .sob4 h2
+, .sobrenos .sob5 h2, .sobrenos .sob6 h2, .sobrenos .sob7 h2{
     font-size: 30px;
     padding: 15px;
+    text-align: center;
 }
 
 .sobrenos .sob1 img{
@@ -459,7 +462,7 @@ footer{
     height: 60%;
     grid-column: 1;
     grid-row: 2;
-    margin-left: -20%;
+    margin-left: 20%;
 }
 
 .sobrenos .sob2{
@@ -475,12 +478,46 @@ footer{
 .sobrenos .sob3{
     grid-column: 1;
     grid-row: 3;
+    margin: 100px;
+
 }
 
 .sobrenos .sob4{
     grid-column: 2;
     grid-row: 3;
+    margin: 100px;
+
 }
+
+.sobrenos .sob5{
+    grid-column: 1;
+    grid-row: 4;
+    margin: 100px;
+
+}
+
+.sobrenos .sob6{
+    grid-column: 2;
+    grid-row: 4;
+    margin: 100px;
+    text-align: justify;
+
+}
+
+.sobrenos .sob7{
+    grid-column: 1 / 3;
+    grid-row: 5;
+    margin: 100px;
+}
+
+.sobrenos .sob7 p:last-of-type{
+    text-align: center;
+    font-weight: bold;
+    padding: 25px;
+}
+
+
+
 
 
 
