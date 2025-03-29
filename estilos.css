@@ -23,6 +23,7 @@ body {
     color: #333;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
 }
 
  /* Estilos de la cabecera */   
@@ -145,27 +146,26 @@ border: 1px solid #333;
     grid-row: 1; /* Coloca el .cabecera2 en la primera fila */
     justify-self: center; /* Centra horizontalmente */
     align-self: center; /* Centra verticalmente */
-    align-items: center; /* Alinea los elementos verticalmente */
-    margin-left: -200px; 
+    align-items: center; /* Alinea los elementos verticalmente */ 
     padding: 10px;
-    margin-top: -100px;
+    margin: 0px;
 }
 
 .sec0 h1{
     font-size: 25px;
     font-weight: bold;
-    margin: 20px 0;  
+    margin:0;  
     padding: 5px;
 }
 
 .sec0 p{
     font-weight: bold;
     margin: 0;
-    padding: 0px;
+    padding: 5px;
 }
 
 .mainindex img{
-    margin-top: 40px;
+    margin-top: 0px;
 }
 
 .sec1{
@@ -237,6 +237,11 @@ border: 1px solid #333;
     margin: 0 50px;
 }
 
+.sec2 img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al 120% */
+    transition: transform 0.3s ease; /* Suaviza la animación */
+}
+
 
 
 
@@ -250,28 +255,50 @@ footer{
     color: #333;
     text-align: center;
     padding: 0px;
-    margin: 0px;
+    margin: 
+    0px;
     width: 100%;
     margin-top: 100px;
 }
+
 
 .pie1{
     grid-row: 1; /* Coloca el .pie1 en la primera fila */
     grid-column: 1; /* Coloca el .pie3 en la segunda columna */
     align-items: center; /* Alinea los elementos verticalmente */
-    padding: 0px;    
-}
+    padding: 10px;   
+    font-weight: bold;
+
+    }
 
 .pie1 img{
     width: 100px;
     height: 100px;
-    margin-bottom: -30px;
+    padding: 0px;
+    padding: 0px;
 }
 
-.insta img{
+.pie1 h3{ 
+    margin-top:10px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.pie1 p{
+    padding: 5px;
+}
+
+.pie1 a img{
     width: 35px;    
     height: 35px;
-    margin-bottom: auto;
+}
+
+.pie1 a img:hover{
+    background: #FFC107; /* Cambia el color de fondo al pasar el mouse */
+    color: #FFC107; /* Cambia el color del texto al pasar el mouse */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #333; /* Borde */
 }
 
 .pie2{
@@ -279,21 +306,35 @@ footer{
     grid-column: 2; /* Coloca el .pie3 en la segunda columna */
     align-items: center; /* Alinea los elementos verticalmente */
     padding: 10px;
-    list-style-type: none;
 }
 
 .pie2 ul{
-    list-style-type: none;
-    display: flex; /* Cambia a flexbox */
-    flex-direction: column; /* Organiza los elementos en columna */
-    justify-content: space-between; /* Distribuye los elementos uniformemente en altura */
+    list-style-type: none; /* Elimina los puntos de la lista */
     height: 100%; /* Asegúrate de que ocupe toda la altura disponible */
     margin-top: 10px;
-    gap: 0px;
+}
+
+.pie2 ul li{
+    margin: 0px; /* Espacio entre los elementos */
+    padding: 10px;
+}
+
+.pie2 li a:hover{
+    background: #FFC107; /* Cambia el color de fondo al pasar el mouse */
+    color: #333; /* Cambia el color del texto al pasar el mouse */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #333; /* Borde */
 }
 
 
 .pie3{
+    display: flex; /* Cambia a flexbox */
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: space-between; /* Distribuye los elementos uniformemente en altura */
+    align-items: center; /* Centra los elementos horizontalmente */
+    height: 100%; /* Asegúrate de que ocupe toda la altura disponible */
+    padding: 10px; /* Espaciado interno */
     grid-row: 1; /* Coloca el .pie1 en la primera fila */
     grid-column: 3; /* Coloca el .pie3 en la segunda columna */
     align-items: center; /* Alinea los elementos verticalmente */
@@ -303,6 +344,25 @@ footer{
 
 .pie3 h4{
     font-weight: bold;
+}
+
+.maps{
+    margin: 10px;
+}
+
+.maps img{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    padding: 0px;
+}
+
+.maps img:hover{
+    background: #FFC107; /* Cambia el color de fondo al pasar el mouse */
+    color: #FFC107; /* Cambia el color del texto al pasar el mouse */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #333; /* Borde */
 }
 
 .telefono, .horario, .email, .direccion{
@@ -328,23 +388,27 @@ footer{
     grid-row: 1; /* Coloca el .pie3 en la segunda columna */
     grid-column: 4; /* Coloca el .pie4 en la segunda columna */
     align-items: center; /* Alinea los elementos verticalmente */
-    padding: -10px;
-    height: auto;
-}
-
-.pie1, .pie2, .pie3, .pie4 {
-    display: flex; /* Cambia a flexbox */
-    flex-direction: column; /* Organiza los elementos en columna */
-    justify-content: space-between; /* Distribuye los elementos uniformemente en altura */
-    align-items: center; /* Centra los elementos horizontalmente */
+    padding: 10px;
     height: 100%; /* Asegúrate de que ocupe toda la altura disponible */
-    padding: 10px; /* Espaciado interno */
 }
 
-.pie1, .pie2, .pie3, .pie4{
-    margin: 10px;
+.pie4 ul{
+    font-weight: bold;
+    margin-top: 10px;
+    list-style-type: none;
 }
 
+.pie4 ul li{
+    padding: 10px;
+}
+
+.pie4 ul li a:hover{
+    background: #FFC107; /* Cambia el color de fondo al pasar el mouse */
+    color: #333; /* Cambia el color del texto al pasar el mouse */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #333; /* Borde */
+}
 
 .copy{
     grid-column: 2 / 4 ; /* Coloca el .pie4 en la segunda columna */
@@ -355,13 +419,120 @@ footer{
     margin-top: 20px;
     padding: 10px 0;
 }
-/* estilos.css  productos */
-
-
-
-/* estilos.css  sobre */
 
 
 
 
-/* estilos.css  contacto */
+/* Estilos de la sección "Productos" */
+
+
+
+
+/* Estilos de la sección "Sobre nosotros" */
+
+.sobrenos{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    grid-template-rows: auto auto auto; /*2 fila */
+    justify-items: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-top: 100px;
+    gap: 20px; /* Espaciado entre los elementos */
+    height: auto;
+    line-height: 1.8;
+}
+
+.sobrenos .sob{
+    grid-column: 1 / 3;
+    grid-row: 1;   
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+.sobrenos .sob h1{
+    font-size: 30px;
+    padding: 15px;
+}
+
+.sobrenos .sob1 img{
+    width: 60%;
+    height: 60%;
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: -20%;
+}
+
+.sobrenos .sob2{
+    grid-column: 2;
+    grid-row: 2;
+    margin-right: 25%;
+}
+
+.sobrenos .sob2 h2{
+    padding: 10px;
+}
+
+.sobrenos .sob3{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.sobrenos .sob4{
+    grid-column: 2;
+    grid-row: 3;
+}
+
+
+
+
+
+
+
+
+
+/* Estilos de la sección "Contacto" */
+
+
+/* Politicas */
+
+#aviso, #politica, #cookies{
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: left;
+    width: 60%;
+}
+
+#aviso h2, #aviso h1, #politica h2, #politica h1, #cookies h2, #cookies h1{
+    margin: 100px;
+    text-align: center;
+}
+
+#aviso p, #politica p, #cookies p{
+    padding: 0px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+#aviso ul, #politica ul, #cookies ul{
+    margin: 20px;
+    padding: 0px;
+    text-align: left;
+    line-height: 1.8;
+    list-style: none;
+} 
+
+#aviso a, #politica a, #cookies a{
+    text-decoration: none;
+    background: #4CAF50;
+    font-weight: bold;
+    margin: 3px;
+}
+
+#aviso a:hover, #politica a:hover, #cookies a:hover{
+    color: #FFC107;
+    font-weight: bold;
+    padding: 3px;
+}
+
+    
+
