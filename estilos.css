@@ -37,7 +37,6 @@ body {
     margin-bottom: 0px;
     padding: 0px;   
     height: 150px;  
-    display: flex;
     justify-content: space-between; /* Distribuye los elementos entre los extremos */
     align-items: center; /* Alinea los elementos verticalmente */
     border-radius: 50px; /* Bordes redondeados */
@@ -68,7 +67,7 @@ body {
     overflow: hidden;
 }
 
-h1 .titulo1{
+h1.titulo1{
     font-size: 34px;
     font-weight: bold;
     margin: 10px 0;  
@@ -87,13 +86,15 @@ h1 .titulo1{
     margin: 5px 0 0 0;
     padding: 10px;
     gap: 30px;
+    margin-bottom: 10px;
 }
 
 .menu1 ul{
     width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
     align-items: center; /* Alinea los elementos verticalmente */
     margin: 0px;
-    padding: 0px;  
+    padding: 0px; 
+ 
 }
 
  a{
@@ -324,8 +325,7 @@ footer{
     color: #333;
     text-align: center;
     padding: 0px;
-    margin: 
-    0px;
+    margin: 0px;
     width: 100%;
     margin-top: 100px;
     border-radius: 10px;
@@ -383,7 +383,6 @@ footer{
 .pie2{
     grid-row: 1; /* Coloca el .pie2 en la primera fila */
     grid-column: 2; /* Coloca el .pie3 en la segunda columna */
-    align-items: center; /* Alinea los elementos verticalmente */
     padding: 10px;
 }
 
@@ -418,12 +417,10 @@ footer{
     display: flex; /* Cambia a flexbox */
     flex-direction: column; /* Organiza los elementos en columna */
     justify-content: space-between; /* Distribuye los elementos uniformemente en altura */
-    align-items: center; /* Centra los elementos horizontalmente */
     height: 100%; /* Asegúrate de que ocupe toda la altura disponible */
     padding: 10px; /* Espaciado interno */
     grid-row: 1; /* Coloca el .pie1 en la primera fila */
     grid-column: 3; /* Coloca el .pie3 en la segunda columna */
-    align-items: center; /* Alinea los elementos verticalmente */
     padding: 10px;
     color: #333;
 }
@@ -473,7 +470,6 @@ footer{
 .pie4{
     grid-row: 1; /* Coloca el .pie3 en la segunda columna */
     grid-column: 4; /* Coloca el .pie4 en la segunda columna */
-    align-items: center; /* Alinea los elementos verticalmente */
     padding: 10px;
     height: 100%; /* Asegúrate de que ocupe toda la altura disponible */
 }
@@ -507,7 +503,6 @@ footer{
     grid-row: 2; /* Coloca el .copy en la segunda fila */
     justify-self: center; /* Centra horizontalmente */
     align-self: center; /* Centra verticalmente */
-    align-items: center; /* Centra los elementos horizontalmente */
     margin-top: 20px;
     padding: 10px 0;
 }
