@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="icon" href="Logo/donut.png" type="logo/png">
 </head>
-<body>
+<body class="elcontacto">
 
     <!--Esta va a ser la cabecera de la página-->
 
@@ -38,17 +38,55 @@
         </div>
        
     </header>
+    <main class="contacto">
 
+        <div class="cont1">
+            <img src="imagenes/logomas.png" alt="logo">
+        </div>
 
-    <section class="contacto">
-        <h2>Contáctanos</h2>
+        <div class="cont2">
+            <h1>¿Tienes alguna pregunta o necesitas más información?</h1>
+                <p>No dudes en contactarnos, ¡estamos para ayudarte!</p>
+                <p>Palafrugell o cercanias: 641893861</p>       
+        
+            <h2>Horario de apertura:</h2>
+               <p>Lunes a Viernes: 9:00 - 21:00</p>
+               <p>Sábados: 9:00 - 14:00</p>
+               <p>Domingos: Cerrado</p> 
+        </div>
+
+     <div class="cont3">
+        <h4>Atención personalizada</h4>
+        <h2>Contactad con nosotros</h2>
+
         <form>
-            <input type="text" placeholder="Tu Nombre" required>
-            <input type="email" placeholder="Tu Correo" required>
-            <textarea placeholder="Tu Mensaje"></textarea>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" placeholder="Tu Nombre" name="nombre" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" placeholder="Tu Correo" name="email" required>
+            
+            <label for="telefono">Número de teléfono (opcional):</label>
+            <input type="tel" placeholder="Tu Número de teléfono" name="telefono">
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea placeholder="Tu Mensaje" name="mensaje" rows="4" required></textarea>
             <button type="submit">Enviar</button>
         </form>
-    </section>
+    </div>
+
+    <div class="wats" ><a href="https://wa.me/34641893861?text=¡Hola!%20Estoy%20interesado%20en%20sus%20productos." target="_blank">
+        <img src="imagenes/whatsaap.jpg" alt="WhatsApp" width="50px" height="50px">
+    </a>
+    </div>
+
+  </main>
+
+    <div class="flecha">
+        <a href="#" class="volver-arriba">
+            <img src="imagenes/flexa.jpg" alt="Volver arriba">
+        </a>
+    </div>
 
     <!--Esta va a ser el footer de la página-->
 
