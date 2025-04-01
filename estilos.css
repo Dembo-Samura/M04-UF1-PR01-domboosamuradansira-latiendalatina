@@ -180,14 +180,14 @@ border: 1px solid #333;
 .sec0 h1{
     font-size: 25px;
     font-weight: bold;
-    margin:0;  
+    margin-top :-75px;  
     padding: 5px;
 }
 
 .sec0 p{
     font-weight: bold;
     margin-bottom: 100;
-    padding: 5px;
+    padding: 10px;
 }
 
 .mainindex img{
@@ -223,7 +223,7 @@ border: 1px solid #333;
 .sec1 p{
     font-weight: bold;
     margin: 0;
-    padding: 0px;
+    padding: 10px;
     text-align: left;
     line-height: 1.8;
 }
