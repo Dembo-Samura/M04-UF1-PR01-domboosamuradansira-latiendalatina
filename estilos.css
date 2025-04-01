@@ -759,7 +759,7 @@ input:focus, textarea:focus {
 
 button {
     width: 100%;
-    background-color: #FFC107 ;
+    background-color: #4CAF50 ;
     color: white;
     padding: 10px;
     border: none;
@@ -771,7 +771,7 @@ button {
 }
 
 button:hover {
-    background-color: #4CAF50;
+    background-color: #FFC107;
 }
 
 /* Politicas */
