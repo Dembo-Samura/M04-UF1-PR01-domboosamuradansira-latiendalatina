@@ -1,10 +1,10 @@
 /* colores principales */
 :root {
-    --color-primario: #4CAF50; /* Verde */
-    --color-secundario: #FFC107; /* Ámbar */
+    --color-primario: #4CAF50; 
+    --color-secundario: #FFC107; 
     --color-texto: #333;
     --color-blanco: #fff;
-    --color-fondo: #f8f9fa; /* Fondo general */
+    --color-fondo: #f8f9fa; 
 }
 
 /* reset */
@@ -15,7 +15,6 @@
 }
 
 
-/* estilos.css  index */
 
 /* Estilos generales */
 body {
@@ -24,9 +23,20 @@ body {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0px;
+    gap: 8px;
+    margin: 16px;
 }
 
- /* Estilos de la cabecera */   
+body.elindex, body.elproducto{
+    background-image: linear-gradient(to top, #4CAF50, #fff, #FFC107);
+}
+
+body.elsobre, body.elcontacto{
+    background-image: url("imagenes/bandera.png");
+    background-size: 100%;
+}
+
+ /* -------------------------------------------------------------Estilos de la cabecera */   
 
 .cabecera1{
     background-color: #FFC107;
@@ -36,31 +46,48 @@ body {
     align-items: center;
     margin-bottom: 0px;
     padding: 0px;   
-    height: 150px;  
+    height: 250px;  
     justify-content: space-between; /* Distribuye los elementos entre los extremos */
     align-items: center; /* Alinea los elementos verticalmente */
-    border-radius: 50px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px #333; /* Sombra */
-    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); /* Sombra negra suave */
+    border-radius: 50px; 
+    box-shadow: 0 4px 8px #333;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); 
     width: 100%;
 }
 .logocabecera{
     grid-column: 1;
     justify-self: start;
-    margin: 0px;
-    padding: 0px;
-    width: 150px;
-    height: 150px;
-    border-radius: 0;
 }
 
-.cabcentral1{
-    grid-column: 2; /* Columna central */
+.cabecera1 .logocabecera img, 
+.cabecera1 .logocabecera2 img{
+    margin: 0px;
+    padding: 0px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+}
+
+.logocabecera img,
+.logocabecera2 img {
+    transition: 0.3s ease-in-out;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logocabecera img:hover,
+.logocabecera2 img:hover,
+.mainindex img:hover {
+    transform: rotate(10deg);
+}
+
+.cabcentral2{
+    grid-column: 2; 
     text-align: center;
     display: flex;
     flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: space-between; /* Distribuye los elementos verticalmente */
+    align-items: center; 
+    justify-content: space-between; 
     gap: 10px; /* Reduce el espaciado entre los elementos */
     padding: 10px;
     height: auto;
@@ -68,7 +95,7 @@ body {
 }
 
 h1.titulo1{
-    font-size: 34px;
+    font-size: 44px;
     font-weight: bold;
     margin: 10px 0;  
     padding: 0px;
@@ -78,11 +105,12 @@ h1.titulo1{
     font-weight: bold;
     margin: 0;
     padding: 5px;
+    font-size: 22px;
+
 }
     
 .menu1{
     display: inline;
-
     margin: 5px 0 0 0;
     padding: 10px;
     gap: 30px;
@@ -90,17 +118,10 @@ h1.titulo1{
 }
 
 .menu1 ul{
-    width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+    width: 100%;
     align-items: center; /* Alinea los elementos verticalmente */
     margin: 0px;
     padding: 0px; 
- 
-}
-
- a{
-    text-decoration: none;
-    color: #333;  
-    font-weight: bold;
 }
 
 .menu1 ul li{
@@ -108,59 +129,47 @@ h1.titulo1{
     list-style-type: none;
     margin: 0 50px;
 }
-.menu1 ul li a{
-    transition: 0.3s;
-    transform: translateX(-50%);
-    background: #4CAF50;
-    color: #fff;
-    padding: 7px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+.menu1 button{
+    background-color: #4CAF50 ;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 15px;
+    transition: 'background' 0.3s;
+    box-shadow: 0 4px 8px #333; 
+    height: 48px;
 }
 
-.menu1 ul li a:hover{
-color: #FFC107;
-padding: 10px;
-border-radius: 5px;
-border: 1px solid #333;
-
+.menu1 button a{
+    text-decoration: none;
+    color: #fff;  
+    font-weight: bold;
 }
 
-.menu1 ul li a:hover::after {
-    width: 100%;
+button:hover {
+    background-color: #FFC107;
 }
 
 .logocabecera2{
     grid-column: 3;
     justify-self: end;
     align-self: start;
-    width: 150px;
-    height: 150px;
-    border-radius: 0;
 }
 
-.logocabecera img,
-.logocabecera2 img {
-    transition: transform 0.3s ease-in-out;
-    border-radius: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
-.logocabecera img:hover,
-.logocabecera2 img:hover {
-    transform: rotate(10deg);
-}
-
-/* estilos.css  mainindex */
-/* Estilos del contenedor principal */
+/* ---------------------------------------------------------------estilos.css  mainindex */
+/* -------------------------------------------------------------- Estilos del contenedor principal */
 .mainindex{
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columnas */
-    grid-template-rows: 1fr 1fr; /* tres filas */
-    justify-self: center; /* Centra horizontalmente */
-    align-self: center; /* Centra verticalmente */
-    align-items: center; /* Alinea los elementos verticalmente */
-    gap: 20px; /* Espacio entre los elementos */
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    justify-self: center; 
+    align-self: center; 
+    align-items: center;
+    gap: 20px; 
     padding: 20px;
     margin: 0px;
     width: 100%;
@@ -168,44 +177,36 @@ border: 1px solid #333;
 }
 
 .sec0{
-    grid-column: 1; /* Ocupa ambas columnas */
-    grid-row: 1; /* Coloca el .cabecera2 en la primera fila */
-    justify-self: center; /* Centra horizontalmente */
-    align-self: center; /* Centra verticalmente */
-    align-items: center; /* Alinea los elementos verticalmente */ 
-    padding: 10px;
+    grid-column: 1; 
+    grid-row: 1; 
     margin: 0px;
 }
 
 .sec0 h1{
     font-size: 25px;
-    font-weight: bold;
     margin-top :-75px;  
     padding: 5px;
 }
 
-.sec0 p{
+.sec0 h1, .sec0 p, .sec1 h2, .sec1 p, .sec2 h2, .sec2 p{
     font-weight: bold;
+}
+
+.sec0 p{
     margin-bottom: 100;
     padding: 10px;
 }
 
 .mainindex img{
+    border-radius: 50px; 
+    box-shadow: 0 4px 8px #333;
     margin-top: 30px;
     transition: transform 0.3s ease-in-out;
 }
 
-.mainindex img:hover{
-    transform: rotate(10deg);
-
-}
-
 .sec1{
-    grid-column: 2; /* Coloca el .sec1 en la primera columna */
-    grid-row: 1; /* Coloca el .sec1 en la segunda fila */
-    justify-self: center; /* Centra horizontalmente */
-    align-self: center; /* Centra verticalmente */
-    align-items: center; /* Alinea los elementos verticalmente */
+    grid-column: 2; 
+    grid-row: 1; 
     margin: 0px;
     padding: 10px;
     margin-right: 100px;
@@ -215,13 +216,11 @@ border: 1px solid #333;
 
 .sec1 h2{
     font-size: 25px;
-    font-weight: bold;
     margin: 20px 0;  
     padding: 5px;
 }
 
 .sec1 p{
-    font-weight: bold;
     margin: 0;
     padding: 10px;
     text-align: left;
@@ -230,11 +229,8 @@ border: 1px solid #333;
 
 .sec2{
     color: #333;
-    grid-column: 1 / 3; /* Coloca el .section2 en la primera columna */
-    grid-row: 2; /* Coloca el .section2 en la segunda fila */
-    justify-self: center; /* Centra horizontalmente */
-    align-self: center; /* Centra verticalmente */
-    align-items: center; /* Alinea los elementos verticalmente */
+    grid-column: 1 / 3; 
+    grid-row: 2; 
     margin-left: 0px; 
     margin-top: -50px;
     padding: 10px;
@@ -246,13 +242,11 @@ border: 1px solid #333;
 }
 
 .sec2 h2{
-    font-weight: bold;
     margin: 20px 0;  
     padding: 5px;
 }
 
 .sec2 p{
-    font-weight: bold;
     margin: 0;
     padding: 0px;
     line-height: 1.8;
@@ -268,38 +262,36 @@ border: 1px solid #333;
 }
 
 .sec2 img{
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     margin: 0 50px;
+}
+
+.sec2 img, .wats img, .flecha img{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.sec2 img:hover {
-    transform: scale(1.2); /* Aumenta el tamaño al 120% */
-    transition: transform 0.3s ease; /* Suaviza la animación */
+.sec2 img:hover, .wats img:hover, .flecha img:hover{
+    transform: scale(1.2); 
+    transition: transform 0.3s ease; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .wats{
-    position: fixed; /* Fija el icono en la pantalla */
-    bottom: 100px; /* Lo posiciona 20px desde la parte inferior */
-    right: 20px; /* Lo posiciona 20px desde la derecha */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-
+    bottom: 100px;
+    right: 20px; 
 }
 
-.wats img:hover {
-    transform: scale(1.2); /* Aumenta el tamaño */
-    transition: transform 0.3s ease; /* Suaviza la animación */
+.wats, .flecha{
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    position: fixed; 
 }
 
 .flecha{
-    position: fixed;
-    bottom: 20px; /* Justo encima del botón de WhatsApp */
+    bottom: 20px; 
     right: 20px;
-    z-index: 1000;
 }
 
 .flecha img{
@@ -307,20 +299,14 @@ border: 1px solid #333;
     height: 50px;
 }
 
-.flecha img:hover{
-    transform: scale(1.2); /* Aumenta el tamaño */
-    transition: transform 0.3s ease; /* Suaviza la animación */
-
-}
 
 
-
-/* estilos.css  footer */
+/* --------------------------------------------------------------------------estilos.css  footer */
 
 footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto; /* Dos filas */
+    grid-template-rows: auto auto; 
     background: #4CAF50;
     color: #333;
     text-align: center;
@@ -334,13 +320,20 @@ footer{
 
 
 .pie1{
-    grid-row: 1; /* Coloca el .pie1 en la primera fila */
-    grid-column: 1; /* Coloca el .pie3 en la segunda columna */
-    align-items: center; /* Alinea los elementos verticalmente */
-    padding: 10px;   
-    font-weight: bold;
+    grid-row: 1; 
+    grid-column: 1; 
+    align-items: center; 
+ }
 
-    }
+ .pie1, .pie1 h3, .pie1 a img:hover, .maps img:hover, .pie2, .pie2 ul li, .pie2 li a:hover, 
+ .pie3, .pie4, .pie4 ul li, .pie4 ul li a:hover, .copy, .telefono, .horario, .email, .direccion{
+    padding: 10px;
+
+}
+
+ .pie1, .pie3 h4, .direccion h4 a, .pie2 ul, .pie4 ul {
+    font-weight: bold;
+ }
 
 .pie1 img{
     width: 100px;
@@ -348,6 +341,9 @@ footer{
     padding: 0px;
     padding: 0px;
     transition: transform 0.3s ease-in-out;
+}
+
+.pie1 img, .pie2 ul li a, .pie4 ul li a{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -359,7 +355,6 @@ footer{
 
 .pie1 h3{ 
     margin-top:10px;
-    padding: 10px;
     margin-bottom: 30px;
 }
 
@@ -372,61 +367,55 @@ footer{
     height: 35px;
 }
 
-.pie1 a img:hover{
-    background: #FFC107; /* Cambia el color de fondo al pasar el mouse */
-    color: #FFC107; /* Cambia el color del texto al pasar el mouse */
-    padding: 10px;
-    border-radius: 5px; /* Bordes redondeados */
-    border: 1px solid #333; /* Borde */
+.pie1 a img:hover, .maps img:hover{
+    color: #FFC107; 
+}
+
+.pie1 a img:hover, .pie2 li a:hover, .maps img:hover, .pie4 ul li a:hover {
+    border-radius: 5px; 
+    border: 1px solid #333;
+}
+
+.pie1 a img:hover, .pie2 ul li a, .maps img:hover, .direccion h4 a, .pie4 ul li a {
+    background: #FFC107;  
 }
 
 .pie2{
-    grid-row: 1; /* Coloca el .pie2 en la primera fila */
-    grid-column: 2; /* Coloca el .pie3 en la segunda columna */
-    padding: 10px;
+    grid-row: 1; 
+    grid-column: 2; 
 }
 
-.pie2 ul{
-    list-style-type: none; /* Elimina los puntos de la lista */
-    height: 100%; /* Asegúrate de que ocupe toda la altura disponible */
+.pie2 ul, .pie4 ul{
+    list-style-type: none; 
+    height: 100%; 
     margin-top: 10px;
 }
 
 .pie2 ul li{
-    margin: 0px; /* Espacio entre los elementos */
-    padding: 10px;
+    margin: 0px; 
 }
 
-.pie2 ul li a{
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.pie2 ul li a, .pie4 ul li a{
     padding: 7px;
-    background-color: #FFC107;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 8px #333; 
+
 }
 
-.pie2 li a:hover{
-    background: #4CAF50; /* Cambia el color de fondo al pasar el mouse */
-    color: #333; /* Cambia el color del texto al pasar el mouse */
-    padding: 10px;
-    border-radius: 5px; /* Bordes redondeados */
-    border: 1px solid #333; /* Borde */
+.pie2 li a:hover, .pie4 ul li a:hover{
+    background: #4CAF50; 
+    color: #333; 
 }
 
 
 .pie3{
-    display: flex; /* Cambia a flexbox */
-    flex-direction: column; /* Organiza los elementos en columna */
-    justify-content: space-between; /* Distribuye los elementos uniformemente en altura */
-    height: 100%; /* Asegúrate de que ocupe toda la altura disponible */
-    padding: 10px; /* Espaciado interno */
-    grid-row: 1; /* Coloca el .pie1 en la primera fila */
-    grid-column: 3; /* Coloca el .pie3 en la segunda columna */
-    padding: 10px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    grid-row: 1; 
+    grid-column: 3; 
     color: #333;
-}
-
-.pie3 h4{
-    font-weight: bold;
 }
 
 .maps{
@@ -440,24 +429,9 @@ footer{
     padding: 0px;
 }
 
-.maps img:hover{
-    background: #FFC107; /* Cambia el color de fondo al pasar el mouse */
-    color: #FFC107; /* Cambia el color del texto al pasar el mouse */
-    padding: 10px;
-    border-radius: 5px; /* Bordes redondeados */
-    border: 1px solid #333; /* Borde */
-}
-
-.telefono, .horario, .email, .direccion{
-    padding: 10px;
-
-}
-
 .direccion h4 a{
-    display: inline-block; /* Cambia el comportamiento del enlace */
+    display: inline-block; 
     margin-top: 40px;
-    font-weight: bold;
-    background: #FFC107;
 }
 
 .direccion img{
@@ -468,49 +442,27 @@ footer{
     
 
 .pie4{
-    grid-row: 1; /* Coloca el .pie3 en la segunda columna */
-    grid-column: 4; /* Coloca el .pie4 en la segunda columna */
-    padding: 10px;
-    height: 100%; /* Asegúrate de que ocupe toda la altura disponible */
+    grid-row: 1; 
+    grid-column: 4; 
+    height: 100%; 
 }
 
-.pie4 ul{
-    font-weight: bold;
-    margin-top: 10px;
-    list-style-type: none;
-}
-
-.pie4 ul li{
-    padding: 10px;
-}
 .pie4 ul li a{
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 7px;
-    background: #FFC107;
-}
-
-.pie4 ul li a:hover{
-    background: #4CAF50; /* Cambia el color de fondo al pasar el mouse */
-    color: #333; /* Cambia el color del texto al pasar el mouse */
-    padding: 10px;
-    border-radius: 5px; /* Bordes redondeados */
-    border: 1px solid #333; /* Borde */
 }
 
 .copy{
-    grid-column: 2 / 4 ; /* Coloca el .pie4 en la segunda columna */
-    grid-row: 2; /* Coloca el .copy en la segunda fila */
-    justify-self: center; /* Centra horizontalmente */
-    align-self: center; /* Centra verticalmente */
+    grid-column: 2 / 4 ; 
+    grid-row: 2; 
+    justify-self: center; 
+    align-self: center; 
     margin-top: 20px;
-    padding: 10px 0;
 }
 
 
 
 
-/* Estilos de la sección "Productos" */
+/* ------------------------------------------------------------Estilos de la sección "Productos" */
 
 .productos{
     background-color: #FFC107;
@@ -541,27 +493,44 @@ footer{
     width: 100%;
     border-radius: 10px;
 }
-button {
-    background-color: green;
-    color: white;
-    padding: 10px;
+.producto button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 24px;
     border: none;
     cursor: pointer;
+    font-size: 18;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.producto button a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+    height: 50px;
+}
+
+.producto button:hover{
+    background: #FFC107;
+    transition: 0.3s ease-in-out;
 }
 
 
 
 
-/* Estilos de la sección "Sobre nosotros" */
+/* -------------------------------------------Estilos de la sección "Sobre nosotros" */
 
 .sobrenos{
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
-    grid-template-rows: auto auto auto auto auto; /*2 fila */
-    justify-items: center; /* Centra horizontalmente los elementos */
-    align-items: center; /* Centra verticalmente los elementos */
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto auto auto auto; 
+    justify-items: center; 
+    align-items: center; 
     margin-top: 100px;
-    gap: 20px; /* Espaciado entre los elementos */
+    gap: 20px; 
     height: auto;
     line-height: 1.8;
     text-align: justify;
@@ -573,9 +542,13 @@ button {
     margin-right: 15%;
     margin-left: 15%;
     background:#FFC107;
-    padding: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sobrenos .sob, .sobrenos .sob2, .sobrenos .sob3, .sobrenos .sob4, .sobrenos .sob5, .sobrenos .sob6, .sobrenos .sob7{
+    padding: 50px;
+
 }
 
 .sobrenos .sob h1, .sobrenos .sob1 h2, .sobrenos .sob2 h2, .sobrenos .sob3 h2, .sobrenos .sob4 h2
@@ -591,6 +564,10 @@ button {
     grid-column: 1;
     grid-row: 2;
     margin-left: 20%;
+}
+
+.sobrenos .sob1 img, .sobrenos .sob2, .sobrenos .sob3,.sobrenos .sob4, .sobrenos .sob5,
+.sobrenos .sob6, .sobrenos .sob7{ 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -599,10 +576,11 @@ button {
     grid-column: 2;
     grid-row: 2;
     margin-right: 25%;
+}
+
+.sobrenos .sob2, .sobrenos .sob3,.sobrenos .sob5 {
     background-color: #4CAF50;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 
 .sobrenos .sob2 h2{
@@ -613,21 +591,16 @@ button {
     grid-column: 1;
     grid-row: 3;
     margin: 100px;
-    background-color: #4CAF50;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
 }
 
 .sobrenos .sob4{
     grid-column: 2;
     grid-row: 3;
     margin: 100px;
+}
+
+.sobrenos .sob4, .sobrenos .sob6, .sobrenos .sob7{
     background-color: #FFC107;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -635,10 +608,6 @@ button {
     grid-column: 1;
     grid-row: 4;
     margin: 100px;
-    background-color: #4CAF50;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .sobrenos .sob6{
@@ -646,20 +615,12 @@ button {
     grid-row: 4;
     margin: 100px;
     text-align: justify;
-    background-color: #FFC107;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .sobrenos .sob7{
     grid-column: 1 / 3;
     grid-row: 5;
     margin: 100px;
-    background-color: #FFC107;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .sobrenos .sob7 p:last-of-type{
@@ -667,11 +628,6 @@ button {
     font-weight: bold;
     padding: 25px;
 }
-
-
-
-
-
 
 
 
@@ -697,18 +653,23 @@ button {
     grid-row: 1;
     width: 550px; 
     height: 550px;
+    border-radius: 50px; 
+    box-shadow: 0 4px 8px #333;
 }
 
 .cont2{
     grid-column: 2;
     grid-row: 1;
     text-align: justify;
-    text-align: center;
     background-color: #FFC107;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 10%;
     padding: 50px;
+}
+
+.cont2, .cont3{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .cont2 h1, .cont2 h2{
@@ -726,11 +687,8 @@ button {
     font-weight: bold;
     background: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 1000px;
-    text-align: center;
     margin: 100px;
 }
 
@@ -757,7 +715,7 @@ input:focus, textarea:focus {
     outline: none;
 }
 
-button {
+.cont3 button {
     width: 100%;
     background-color: #4CAF50 ;
     color: white;
@@ -767,11 +725,8 @@ button {
     font-size: 18px;
     margin-top: 15px;
     cursor: pointer;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background-color: #FFC107;
+    transition: 'background' 0.3s;
+    height: 48px;
 }
 
 /* Politicas */
@@ -806,6 +761,7 @@ button:hover {
     background: #4CAF50;
     font-weight: bold;
     margin: 3px;
+    color: #333;
 }
 
 #aviso a:hover, #politica a:hover, #cookies a:hover{
