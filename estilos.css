@@ -699,7 +699,7 @@ label {
     margin-top: 10px;
 }
 
-input, textarea {
+input, select, textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -728,6 +728,7 @@ input:focus, textarea:focus {
     transition: 'background' 0.3s;
     height: 48px;
 }
+
 
 /* Politicas */
 

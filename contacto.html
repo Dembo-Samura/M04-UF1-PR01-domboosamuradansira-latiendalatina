@@ -59,7 +59,11 @@
         <h4>Atención personalizada</h4>
         <h2>Contactad con nosotros</h2>
 
-        <form>
+        <form id="miformulario">
+            <div id="Enviado" style="display: none;">
+                ¡Gracias por contactarnos! Tu mensaje ha sido enviado con éxito.
+            </div>
+            
             <label for="nombre">Nombre completo:</label>
             <input type="text" placeholder="Tu Nombre" name="nombre" required>
             
@@ -71,17 +75,34 @@
 
             <label for="departamento">Departamento:</label><br>
             <select id="departamento" name="departamento" required>
-             <option value="">Selecciona un departamento</option>
-             <option value="ventas">Alimentación</option>
-             <option value="soporte">Frutería</option>
-             <option value="marketing">Soporte</option>
-             <option value="otro">Otros</option>
-           </select><br><br>
+             <option value="">Selecciona una sección</option>
+             <option value="alimentacion">Alimentación</option>
+             <option value="fruteria">Frutería</option>
+             <option value="soporte">Soporte</option>
+             <option value="otros">Otros</option>
+           </select>
             
             <label for="mensaje">Mensaje:</label>
             <textarea placeholder="Tu Mensaje" name="mensaje" rows="4" required></textarea>
             <button type="submit">Enviar</button>
         </form>
+        <script>
+            document.getElementById("miformulario").addEventListener("submit", function(event) {
+                event.preventDefault(); // Evita que el formulario se envíe realmente
+                
+                // Mostrar el mensaje de confirmación
+                let mensaje = document.getElementById("Enviado");
+                mensaje.style.display = "block";
+    
+                // Opcional: Limpiar el formulario después de enviar
+                this.reset();
+    
+                // Ocultar el mensaje después de 5 segundos
+                setTimeout(() => {
+                    mensaje.style.display = "none";
+                }, 5000);
+            });
+        </script>
     </div>
 
     <div class="wats" ><a href="https://wa.me/34641893861?text=¡Hola!%20Estoy%20interesado%20en%20sus%20productos." target="_blank">
