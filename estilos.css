@@ -16,7 +16,7 @@
 
 
 
-/* Estilos generales */
+/* -----------------------------------------------------------Estilos generales */
 body {
     background: #fff;
     color: #333;
@@ -25,6 +25,8 @@ body {
     margin: 0px;
     gap: 8px;
     margin: 16px;
+    box-sizing: border-box;
+
 }
 
 body.elindex, body.elproducto{
@@ -36,6 +38,13 @@ body.elsobre, body.elcontacto{
     background-size: 100%;
 }
 
+/* ---------------------------------------------------------------Tipografía para títulos */
+
+h1, h2, h3, h4, h5, h6 {font-family: Georgia, 'Times New Roman', Times, serif;}
+
+h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
  /* -------------------------------------------------------------Estilos de la cabecera */   
 
 .cabecera1{
@@ -130,26 +139,23 @@ h1.titulo1{
     margin: 0 50px;
 }
 
-.menu1 button{
+.menu1 a{
     background-color: #4CAF50 ;
     color: white;
     padding: 10px;
-    border: none;
     border-radius: 5px;
     font-size: 18px;
     margin-top: 15px;
-    transition: 'background' 0.3s;
+    transition: 0.3s;
     box-shadow: 0 4px 8px #333; 
     height: 48px;
-}
-
-.menu1 button a{
+    text-decoration: none;
     text-decoration: none;
     color: #fff;  
     font-weight: bold;
 }
 
-button:hover {
+.menu1 a:hover {
     background-color: #FFC107;
 }
 
@@ -193,14 +199,18 @@ button:hover {
 }
 
 .sec0 p{
-    margin-bottom: 100;
     padding: 10px;
 }
 
-.mainindex img{
+.mainindex .logocontent{
+    margin-top: 30px;
+    width: 400px;
+    height: 400px;
+}
+
+.mainindex .logocontent, .mainindex .sec1 .img1{
     border-radius: 50px; 
     box-shadow: 0 4px 8px #333;
-    margin-top: 30px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -225,6 +235,11 @@ button:hover {
     padding: 10px;
     text-align: left;
     line-height: 1.8;
+}
+
+.mainindex .sec1 .img1{
+    width: 600px;
+    height: 300px;
 }
 
 .sec2{
@@ -294,7 +309,7 @@ button:hover {
     right: 20px;
 }
 
-.flecha img{
+.flecha img, .wats img{
     width: 50px;
     height: 50px;
 }
@@ -477,7 +492,7 @@ footer{
     padding-bottom: 25px;
 }
 
-.producto {
+.productos .producto {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -489,31 +504,26 @@ footer{
     margin: 10px;
 
 }
-.producto img {
+.productos .producto img {
     width: 100%;
     border-radius: 10px;
 }
-.producto button {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 24px;
-    border: none;
-    cursor: pointer;
-    font-size: 18;
-    margin-top: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.producto button a{
-    text-decoration: none;
+.productos .producto a{
+    display: inline-block; 
+    background-color: #4CAF50; 
+    color: #fff; 
+    padding: 10px 20px;
+    font-size: 16px; 
     font-weight: bold;
-    color: #333;
-    font-size: 18px;
-    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-top: 25px;
 }
 
-.producto button:hover{
+.productos .producto a:hover{
     background: #FFC107;
     transition: 0.3s ease-in-out;
 }
@@ -551,7 +561,7 @@ footer{
 
 }
 
-.sobrenos .sob h1, .sobrenos .sob1 h2, .sobrenos .sob2 h2, .sobrenos .sob3 h2, .sobrenos .sob4 h2
+.sobrenos .sob h2, .sobrenos .sob1 h2, .sobrenos .sob2 h2, .sobrenos .sob3 h2, .sobrenos .sob4 h2
 , .sobrenos .sob5 h2, .sobrenos .sob6 h2, .sobrenos .sob7 h2{
     font-size: 30px;
     padding: 15px;
@@ -564,6 +574,9 @@ footer{
     grid-column: 1;
     grid-row: 2;
     margin-left: 20%;
+    width: 500px;
+    height: 500px;
+    margin: 100px;
 }
 
 .sobrenos .sob1 img, .sobrenos .sob2, .sobrenos .sob3,.sobrenos .sob4, .sobrenos .sob5,
@@ -576,6 +589,7 @@ footer{
     grid-column: 2;
     grid-row: 2;
     margin-right: 25%;
+    margin: 100px;
 }
 
 .sobrenos .sob2, .sobrenos .sob3,.sobrenos .sob5 {
@@ -725,7 +739,7 @@ input:focus, textarea:focus {
     font-size: 18px;
     margin-top: 15px;
     cursor: pointer;
-    transition: 'background' 0.3s;
+    transition: 0.3s;
     height: 48px;
 }
 
