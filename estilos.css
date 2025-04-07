@@ -1,3 +1,164 @@
+/* Estilos para tablets (pantallas de ancho máximo 768px) */
+@media (max-width: 768px) {
+    /* Ajustes generales */
+    body {
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+        margin: 0;
+        padding:0;
+    }
+
+    .cabecera1 {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        grid-template-rows: auto auto; /* Ajusta las filas automáticamente */
+        height: auto; /* Ajusta la altura automáticamente */
+        padding: 10px;
+    }
+
+    .cabecera1 .logocabecera img,
+    .cabecera1 .logocabecera2 img {
+        width: 20px; /* Reduce el tamaño de las imágenes */
+        height: 20px;
+    }
+
+    .cabcentral2 {
+        padding: 10px;
+        gap: 5px; /* Reduce el espaciado entre los elementos */
+    }
+
+    .menu1 ul {
+        display: flex;
+        flex-direction: column; /* Cambia el menú a una lista vertical */
+        align-items: center;
+    }
+
+    .menu1 ul li {
+        margin: 5px 0; /* Ajusta el margen entre los elementos del menú */
+    }
+
+    .menu1 a {
+        padding: 8px 12px; /* Ajusta el tamaño de los botones */
+        font-size: 14px;
+    }
+
+    .mainindex .logocontent {
+        grid-column: 1fr; /* Cambia a una sola columna */
+        grid-row: auto; /* Ajusta las filas automáticamente */
+        width: auto;
+        height: auto;
+    }
+
+    .sec1, .sec2 {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .productos .producto {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: auto; /* Ajusta la altura automáticamente */
+        margin: 10px 0;
+    }
+
+    .productos .producto img {
+        width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    }
+
+    .productos .producto a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .sobrenos{
+        height: auto;
+        width: auto;
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        text-align: center;
+    }
+
+    .sob, .sob1, .sob2, .sob3, .sob4, .sob5, .sob6, .sob7 {
+        grid-column: 1; /* Cada sección ocupa toda la fila */
+        margin: 10px;
+        padding: 10px;
+    }
+
+    footer {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        text-align: center;
+    }
+
+    .pie1, .pie2, .pie3, .pie4 {
+        grid-column: 1; /* Cada sección ocupa toda la fila */
+    }
+}
+
+/* Estilos para móviles (pantallas de ancho máximo 480px) */
+@media (max-width: 480px) {
+    /* Ajustes generales */
+    body {
+        font-size: 12px; /* Reduce aún más el tamaño de la fuente */
+    }
+
+    .cabecera1 {
+        padding: 5px;
+    }
+
+    .cabecera1 .logocabecera img,
+    .cabecera1 .logocabecera2 img {
+        width: 100px; /* Reduce aún más el tamaño de las imágenes */
+        height: 100px;
+    }
+
+    .cabcentral2 {
+        gap: 3px;
+    }
+
+    .menu1 ul {
+        flex-direction: column; /* Asegura que el menú sea vertical */
+    }
+
+    .menu1 ul li {
+        margin: 5px 0;
+    }
+
+    .menu1 a {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .mainindex .logocontent {
+        width: 150px;
+        height: 150px;
+    }
+
+    .sec1, .sec2 {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .productos .producto {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin: 5px 0;
+    }
+
+    .productos .producto img {
+        width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    }
+
+    .productos .producto a {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    footer {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        text-align: center;
+    }
+
+    .pie1, .pie2, .pie3, .pie4 {
+        grid-column: 1; /* Cada sección ocupa toda la fila */
+    }
+}
+
+
 /* colores principales */
 :root {
     --color-primario: #4CAF50; 
@@ -63,6 +224,7 @@ h3 { font-size: 24px; }
     text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); 
     width: 100%;
 }
+
 .logocabecera{
     grid-column: 1;
     justify-self: start;
