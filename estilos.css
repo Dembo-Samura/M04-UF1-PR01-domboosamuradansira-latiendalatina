@@ -1,160 +1,169 @@
-/* Estilos para tablets (pantallas de ancho máximo 768px) */
+/* Ajustes para pantallas de ancho máximo 768px (tablets y dispositivos medianos) */
 @media (max-width: 768px) {
-    /* Ajustes generales */
-    body {
-        font-size: 14px; /* Reduce el tamaño de la fuente */
-        margin: 0;
-        padding:0;
-    }
-
+    /* Cabecera */
     .cabecera1 {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
-        grid-template-rows: auto auto; /* Ajusta las filas automáticamente */
-        height: auto; /* Ajusta la altura automáticamente */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
         padding: 10px;
+        border-radius: 0;
     }
 
     .cabecera1 .logocabecera img,
     .cabecera1 .logocabecera2 img {
-        width: 20px; /* Reduce el tamaño de las imágenes */
-        height: 20px;
+        display: none;
     }
 
-    .cabcentral2 {
-        padding: 10px;
-        gap: 5px; /* Reduce el espaciado entre los elementos */
-    }
-
-    .menu1 ul {
+    /* Contenedor principal */
+    .mainindex {
         display: flex;
-        flex-direction: column; /* Cambia el menú a una lista vertical */
+        flex-direction: column;
         align-items: center;
-    }
-
-    .menu1 ul li {
-        margin: 5px 0; /* Ajusta el margen entre los elementos del menú */
-    }
-
-    .menu1 a {
-        padding: 8px 12px; /* Ajusta el tamaño de los botones */
-        font-size: 14px;
-    }
-
-    .mainindex .logocontent {
-        grid-column: 1fr; /* Cambia a una sola columna */
-        grid-row: auto; /* Ajusta las filas automáticamente */
-        width: auto;
-        height: auto;
-    }
-
-    .sec1, .sec2 {
-        margin: 10px;
+        gap: 15px;
         padding: 10px;
+        width: 100%;
     }
 
-    .productos .producto {
-        width: 100%; /* Ocupa todo el ancho disponible */
-        height: auto; /* Ajusta la altura automáticamente */
-        margin: 10px 0;
-    }
-
-    .productos .producto img {
-        width: 100%; /* Ajusta la imagen al ancho del contenedor */
-    }
-
-    .productos .producto a {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-
-    .sobrenos{
-        height: auto;
-        width: auto;
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
+    /* Secciones internas */
+    .sec0, .sec1, .sec2 {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
         text-align: center;
     }
 
-    .sob, .sob1, .sob2, .sob3, .sob4, .sob5, .sob6, .sob7 {
-        grid-column: 1; /* Cada sección ocupa toda la fila */
-        margin: 10px;
-        padding: 10px;
+    /* Asegurar que .sec1 quede debajo de .sec0 */
+    .sec1 {
+        order: 2; /* Asegura que esta sección quede después de .sec0 */
     }
 
+    .sec0 {
+        order: 1; /* Asegura que esta sección quede primero */
+    }
+
+    /* Imágenes dentro de .sec2img en una sola fila */
+    .sec2img ul {
+        display: flex; /* Cambia a Flexbox */
+        flex-wrap: wrap; /* Permite que las imágenes se ajusten si no caben */
+        justify-content: center; /* Centra las imágenes horizontalmente */
+        gap: 10px; /* Espaciado entre las imágenes */
+        padding: 0;
+        margin: 0;
+        list-style: none; /* Elimina los estilos de lista */
+    }
+
+    .sec2img ul li {
+        flex: 1 1 calc(33.33% - 10px); /* Cada imagen ocupa un tercio del ancho */
+        max-width: calc(33.33% - 10px); /* Limita el ancho máximo */
+    }
+
+    .sec2img ul li img {
+        width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+        height: auto; /* Mantiene la proporción de las imágenes */
+        border-radius: 5px;
+    }
+
+    /* Footer */
     footer {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
-        text-align: center;
+        display: flex;
+        flex-direction: column; /* Organiza los elementos en una columna */
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
     }
 
     .pie1, .pie2, .pie3, .pie4 {
-        grid-column: 1; /* Cada sección ocupa toda la fila */
+        width: 100%; /* Cada sección ocupa todo el ancho */
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .pie1 {
+        order: 1; /* Asegura que pie1 quede primero */
+    }
+
+    .pie2 {
+        order: 2; /* Asegura que pie2 quede después de pie1 */
+    }
+
+    .pie3 {
+        order: 3; /* Asegura que pie3 quede después de pie2 */
+    }
+
+    .pie4 {
+        order: 4; /* Asegura que pie4 quede después de pie3 */
+    }
+
+    .copy {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
     }
 }
 
-/* Estilos para móviles (pantallas de ancho máximo 480px) */
+/* Ajustes para pantallas de ancho máximo 480px (móviles y dispositivos pequeños) */
 @media (max-width: 480px) {
-    /* Ajustes generales */
-    body {
-        font-size: 12px; /* Reduce aún más el tamaño de la fuente */
-    }
-
+    /* Cabecera */
     .cabecera1 {
         padding: 5px;
     }
 
-    .cabecera1 .logocabecera img,
-    .cabecera1 .logocabecera2 img {
-        width: 100px; /* Reduce aún más el tamaño de las imágenes */
-        height: 100px;
-    }
-
-    .cabcentral2 {
-        gap: 3px;
-    }
-
-    .menu1 ul {
-        flex-direction: column; /* Asegura que el menú sea vertical */
-    }
-
-    .menu1 ul li {
-        margin: 5px 0;
-    }
-
-    .menu1 a {
-        padding: 6px 10px;
-        font-size: 12px;
-    }
-
-    .mainindex .logocontent {
-        width: 150px;
-        height: 150px;
-    }
-
-    .sec1, .sec2 {
-        margin: 5px;
+    /* Contenedor principal */
+    .mainindex {
+        gap: 10px;
         padding: 5px;
     }
 
-    .productos .producto {
-        width: 100%; /* Ocupa todo el ancho disponible */
+    /* Secciones internas */
+    .sec0, .sec1, .sec2 {
+        padding: 5px;
         margin: 5px 0;
-    }
-
-    .productos .producto img {
-        width: 100%; /* Ajusta la imagen al ancho del contenedor */
-    }
-
-    .productos .producto a {
-        padding: 6px 8px;
-        font-size: 12px;
-    }
-
-    footer {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        width: 100%;
         text-align: center;
     }
 
+    /* Imágenes dentro de .sec2img en una sola fila */
+    .sec2img ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .sec2img ul li {
+        flex: 1 1 calc(50% - 5px); /* Cada imagen ocupa la mitad del ancho */
+        max-width: calc(50% - 5px);
+    }
+
+    .sec2img ul li img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 5px;
+        gap: 5px;
+        width: 100%;
+    }
+
     .pie1, .pie2, .pie3, .pie4 {
-        grid-column: 1; /* Cada sección ocupa toda la fila */
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .copy {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
     }
 }
 
@@ -183,11 +192,10 @@ body {
     color: #333;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0px;
     gap: 8px;
+    width: 100%;
     margin: 16px;
     box-sizing: border-box;
-
 }
 
 body.elindex, body.elproducto{
@@ -237,6 +245,7 @@ h3 { font-size: 24px; }
     width: 250px;
     height: 250px;
     border-radius: 50px;
+    max-width: 100%;
 }
 
 .logocabecera img,
@@ -311,7 +320,6 @@ h1.titulo1{
     transition: 0.3s;
     box-shadow: 0 4px 8px #333; 
     height: 48px;
-    text-decoration: none;
     text-decoration: none;
     color: #fff;  
     font-weight: bold;
